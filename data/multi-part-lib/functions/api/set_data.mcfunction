@@ -29,6 +29,8 @@ function phi.modifyinv:setup/whole_inventory
 
         function phi.modifyinv:apply/hotbar
 
+        data remove storage multi-part-lib:global temp
+
 
     ##  Load the data of the inventory section
     function phi.modifyinv:load/inventory
@@ -48,6 +50,8 @@ function phi.modifyinv:setup/whole_inventory
         data modify block -30000000 0 1602 Items set from storage multi-part-lib:global temp.container
 
         function phi.modifyinv:apply/inventory
+
+        data remove storage multi-part-lib:global temp
 
 
         ##  Load the data of the armor section
@@ -69,6 +73,8 @@ function phi.modifyinv:setup/whole_inventory
 
         function phi.modifyinv:apply/armor
 
+        data remove storage multi-part-lib:global temp
+
 
         ##  Load the data of the offhand section
     function phi.modifyinv:load/offhand
@@ -88,6 +94,8 @@ function phi.modifyinv:setup/whole_inventory
         data modify block -30000000 0 1602 Items set from storage multi-part-lib:global temp.container
 
         function phi.modifyinv:apply/offhand
+
+        data remove storage multi-part-lib:global temp
 
 
 #   Clean up `temp.container` NBT path from `multi-part-lib:global` storage and `input` NBT path from `multi-part-lib:io` storage
