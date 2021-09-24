@@ -97,9 +97,7 @@ Create an "add part" function for adding "part" or arbitrary data to the "base" 
 </summary>
 <br>
 
-In the function, you would need to append any data type to the `multi-part-lib.parts` NBT array (but you can only have single data type in the array), oing so would increase the "base" item's `part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
-
-You can check the current part count of the "base" item by checking the score of the `#part_count` score holder in the `m-p-l.main` scoreboard objective.
+In the function, you would need to append any data type to the `input.multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
 
 After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `multi-part-lib:io` storage, you can call the `multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
 
