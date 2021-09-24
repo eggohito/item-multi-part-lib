@@ -1,0 +1,7 @@
+{
+    "values": [
+        "phi.core:internal/load",
+        "#phi.core:full_load",
+        "multi-part-lib:private/load"
+    ]
+}
