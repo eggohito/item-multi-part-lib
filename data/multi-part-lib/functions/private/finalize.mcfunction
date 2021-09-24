@@ -8,7 +8,7 @@
 #   Prepend a string in the amulet's `Lore` NBT string array ONLY IF the amulet has at least 1 part (or none at all)
 execute store result score #part_count m-p-l.main if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag.multi-part-lib.parts[]
 
-execute unless score #part_count m-p-l.main matches 2.. run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag.display.Lore prepend value '{"text": "Attached parts:", "color": "light_purple", "italic": false}'
+execute if data storage multi-part-lib:global root.default.prepended_msg unless score #part_count m-p-l.main matches 2.. run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag.display.Lore prepend from storage multi-part-lib:global root.default.prepended_msg
 
 
 #   Count how many strings are inside the `parts` NBT array of the amulet
