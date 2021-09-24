@@ -19,8 +19,6 @@ You would reference your load function inside the `#load:post_load` function tag
 ```
 * `<namespace>` being the folder you're using inside the `data` folder
 * `<path/to/function>` being your load function
-
-<br>
 <br>
 
 ## How to use:
@@ -44,6 +42,7 @@ Afterwards, you can run any item action types in its `using_item_action` item ac
 
 Finally, you would run an "add part" function with the `origins:execute_command` entity action type in its `entity_action` entity action object that would modify the "base" item to have the "part" item data declared from the function to the "base" item.
 
+<ol>
 <details>
 <summary>
 Here's a full example that would only add a "part" to the "base" item if the "base" item doesn't have more than 2 parts, and it has the <code>example_tag: 1b</code> NBT
@@ -88,6 +87,7 @@ Here's a full example that would only add a "part" to the "base" item if the "ba
 ```
 
 </details>
+</ol>
 
 </details>
 
@@ -101,6 +101,7 @@ In the function, you would need to append any data type to the `input.multi-part
 
 After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `multi-part-lib:io` storage, you can call the `multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
 
+<ol>
 <details>
 <summary>
 Here's an example function that would append an NBT compound in the `input.multi-part-lib.parts` NBT path containing the generic data of the "part" item
@@ -123,5 +124,6 @@ function multi-part-lib:api/set_data
 ```
 
 </details>
+</ol>
 
 </details>
