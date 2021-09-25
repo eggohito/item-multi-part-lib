@@ -5,4 +5,4 @@
 #@within function *:private/load
 
 
-data modify storage multi-part-lib:global root.default.prepended_msg set value '{"text": "Attached parts:", "color": "light_purple", "italic": false}'
+data modify storage multi-part-lib:global root.msg.prepend set value '{"text": "Attached parts:", "color": "light_purple", "italic": false}'
