@@ -97,14 +97,14 @@ Create an "add part" function for adding "part" or arbitrary data to the "base" 
 </summary>
 <br>
 
-In the function, you would need to append any data type to the `input.multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
+In the function, you would need to append any data type to the `input.tag.multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `multi-part-lib.part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
 
 After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `multi-part-lib:io` storage, you can call the `multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
 
 <ol>
 <details>
 <summary>
-Here's an example function that would append an NBT compound in the `input.multi-part-lib.parts` NBT path containing the generic data of the "part" item
+Here's an example function that would append an NBT compound in the <code>input.tag.multi-part-lib.parts</code> NBT path containing the generic data of the "part" item
 </summary>
 
 ```mcfunction
@@ -116,7 +116,7 @@ function multi-part-lib:api/get_data
 
 
 #   Make changes to the multi-part item stack
-data modify storage multi-part-lib:io input.multi-part-lib.parts append value {id: "minecraft:diamond", Count: 1b}
+data modify storage multi-part-lib:io input.tag.multi-part-lib.parts append value {id: "minecraft:diamond", Count: 1b}
 
 
 #   Apply the changes to the multi-part item stack
