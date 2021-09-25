@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "origins-amulet:parts_on_amulet"
+    ],
+    "icon": {
+        "item": "minecraft:command_block"
+    },
+    "order": 0,
+    "impact": 0,
+    "name": " ",
+    "description": " "
+}

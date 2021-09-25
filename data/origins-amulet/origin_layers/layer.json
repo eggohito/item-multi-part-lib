@@ -1,0 +1,8 @@
+{
+    "order": 100,
+    "origins": [
+        "origins-amulet:allow"
+    ],
+    "auto_choose": true,
+    "hidden": true
+}
