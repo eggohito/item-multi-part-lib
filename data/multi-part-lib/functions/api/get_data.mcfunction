@@ -19,7 +19,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Get the item stack(s) that has the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}]
 
 
     ##  Load the data of the inventory section
@@ -31,7 +31,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Get the item stack(s) that has the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}]
 
 
     ##  Load the data of the armor section
@@ -43,7 +43,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Get the item stack(s) that has the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}]
 
 
     ##  Load the data of the offhand section
@@ -55,7 +55,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Get the item stack(s) that has the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:io input set from storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}]
 
 
 #   Clean up `temp.container` NBT path from `multi-part-lib:global` storage

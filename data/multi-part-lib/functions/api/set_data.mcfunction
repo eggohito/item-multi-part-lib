@@ -19,7 +19,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Modify the item stack(s) that have the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag merge from storage multi-part-lib:io input
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] merge from storage multi-part-lib:io input
 
         execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run function multi-part-lib:private/finalize
 
@@ -41,7 +41,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Modify the item stack(s) that have the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag merge from storage multi-part-lib:io input
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] merge from storage multi-part-lib:io input
 
         execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run function multi-part-lib:private/finalize
 
@@ -63,7 +63,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Modify the item stack(s) that have the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag merge from storage multi-part-lib:io input
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] merge from storage multi-part-lib:io input
 
         execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run function multi-part-lib:private/finalize
 
@@ -85,7 +85,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
         ### Modify the item stack(s) that have the `add_part` NBT compound
-        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}].tag merge from storage multi-part-lib:io input
+        execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run data modify storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] merge from storage multi-part-lib:io input
 
         execute if data storage multi-part-lib:global temp.container[{tag: {multi-part-lib: {add_part: {new: 1b}}}}] run function multi-part-lib:private/finalize
 
