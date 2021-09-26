@@ -2,7 +2,7 @@
 This datapack uses two of the [MinecraftPhi](https://github.com/MinecraftPhi/MinecraftPhi-modules) modules (mostly `phi.modifyinv` and `phi.core`) in order to modify player inventories indirectly.
 <br>
 
-This datapack also uses [Lantern Load](https://github.com/LanternMC/Load) to ensure that this datapack loads before your datapack. You can detect if this library is loaded by checking the score of the `multi-part-lib` score holder from the `load.status` scoreboard objective.
+This datapack also uses [Lantern Load](https://github.com/LanternMC/Load) to ensure that this datapack loads before your datapack. You can detect if this library is loaded by checking the score of the `item-multi-part-lib` score holder from the `load.status` scoreboard objective.
 <br>
 
 e.g: `100` = Version 1.0.0, `110` = Version 1.1.0, etc.
@@ -36,7 +36,7 @@ Upon creating the power, you would check for your "part" item inside its `using_
 
 You can then check for the "base" item that'll have a part added to it once you right-click the said item with the "part" item in its `on_item_condition` item condition object. 
 
-"Base" items store its part count, parts, and other data in its `multi-part-lib` NBT path that you can check for in the <code>on_item_condition</code> item condition object.
+"Base" items store its part count, parts, and other data in its `item-multi-part-lib` NBT path that you can check for in the <code>on_item_condition</code> item condition object.
 
 Afterwards, you can run any item action types in its `using_item_action` item action object. You would then run an `origins:modify` item action type inside its `on_item_action` item action object to apply an item modifier to the "base" item, in order to add a part to it.
 
@@ -66,7 +66,7 @@ Here's a full example that would only add a "part" to the "base" item if the "ba
             },
             {
                 "type": "origins:nbt",
-                "nbt": "{multi-part-lib: {part_count: 2}}",
+                "nbt": "{item-multi-part-lib: {part_count: 2}}",
                 "inverted": true
             }
         ]
@@ -77,7 +77,7 @@ Here's a full example that would only add a "part" to the "base" item if the "ba
     },
     "on_item_action": {
         "type": "origins:modify",
-        "modifier": "multi-part-lib:add_part"
+        "modifier": "item-multi-part-lib:add_part"
     },
     "entity_action": {
         "type": "origins:execute_command",
@@ -97,14 +97,14 @@ Create an "add part" function for adding "part" or arbitrary data to the "base" 
 </summary>
 <br>
 
-In the function, you would need to append any data type to the `input.tag.multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `multi-part-lib.part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
+In the function, you would need to append any data type to the `input.tag.item-multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `item-multi-part-lib.part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
 
-After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `multi-part-lib:io` storage, you can call the `multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
+After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `item-multi-part-lib:io` storage, you can call the `item-multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
 
 <ol>
 <details>
 <summary>
-Here's an example function that would append an NBT compound in the <code>input.tag.multi-part-lib.parts</code> NBT path containing the generic data of the "part" item
+Here's an example function that would append an NBT compound in the <code>input.tag.item-multi-part-lib.parts</code> NBT path containing the generic data of the "part" item
 </summary>
 
 ```mcfunction
@@ -112,15 +112,15 @@ Here's an example function that would append an NBT compound in the <code>input.
 # (data/example/functions/add_part/diamond.mcfunction)
 
 #   Get the multi-part item stack
-function multi-part-lib:api/get_data
+function item-multi-part-lib:api/get_data
 
 
 #   Make changes to the multi-part item stack
-data modify storage multi-part-lib:io input.tag.multi-part-lib.parts append value {id: "minecraft:diamond", Count: 1b}
+data modify storage item-multi-part-lib:io input.tag.item-multi-part-lib.parts append value {id: "minecraft:diamond", Count: 1b}
 
 
 #   Apply the changes to the multi-part item stack
-function multi-part-lib:api/set_data
+function item-multi-part-lib:api/set_data
 ```
 
 </details>

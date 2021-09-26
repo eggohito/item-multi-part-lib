@@ -1,7 +1,7 @@
-#> multi-part-lib:private/dhp
+#> item-multi-part-lib:private/dhp
 #@private
-#declare storage multi-part-lib:io
-#declare storage multi-part-lib:global
+#declare storage item-multi-part-lib:io
+#declare storage item-multi-part-lib:global
 #alias vector minecraftPhiSign -30000000 0 1603
 #alias vector minecraftPhiShulker -30000000 0 1602
 
