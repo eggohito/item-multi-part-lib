@@ -23,6 +23,16 @@ data modify storage item-multi-part-lib:global root.version set value "1.0.0"
 execute unless score #loaded i-m-p-l.main = #loaded i-m-p-l.main run function item-multi-part-lib:config/default
 
 
+#   Initialize MinecraftPhi chunk
+forceload remove -30000000 1600
+
+forceload add -30000000 1600
+
+execute unless block -30000000 0 1602 minecraft:yellow_shulker_box run setblock -30000000 0 1602 minecraft:yellow_shulker_box
+
+execute unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing = south]
+
+
 #   Display load/reload message
 execute unless score #loaded i-m-p-l.main = #loaded i-m-p-l.main run tellraw @a {"translate": "[+ Loaded \"Item Multi-part Library (Origins)\" @ v%s]", "color": "green", "with": [{"storage": "item-multi-part-lib:global", "nbt": "root.version"}]}
 

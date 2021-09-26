@@ -6,12 +6,12 @@
 
 
 #   Fetch the player's inventory data
-function phi.modifyinv:setup/whole_inventory
+function item-multi-part-lib:phi.modifyinv/setup/whole_inventory
 
 
 #   Modify the multi-part item from the player's inventory
     ##  Load the data of the hotbar section
-    function phi.modifyinv:load/hotbar
+    function item-multi-part-lib:phi.modifyinv/load/hotbar
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -27,13 +27,13 @@ function phi.modifyinv:setup/whole_inventory
         ### Apply the changes to the MinecraftPhi shulker box
         data modify block -30000000 0 1602 Items set from storage item-multi-part-lib:global temp.container
 
-        function phi.modifyinv:apply/hotbar
+        function item-multi-part-lib:phi.modifyinv/apply/hotbar
 
         data remove storage item-multi-part-lib:global temp
 
 
     ##  Load the data of the inventory section
-    function phi.modifyinv:load/inventory
+    function item-multi-part-lib:phi.modifyinv/load/inventory
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -49,13 +49,13 @@ function phi.modifyinv:setup/whole_inventory
         ### Apply the changes to the MinecraftPhi shulker box
         data modify block -30000000 0 1602 Items set from storage item-multi-part-lib:global temp.container
 
-        function phi.modifyinv:apply/inventory
+        function item-multi-part-lib:phi.modifyinv/apply/inventory
 
         data remove storage item-multi-part-lib:global temp
 
 
         ##  Load the data of the armor section
-    function phi.modifyinv:load/armor
+    function item-multi-part-lib:phi.modifyinv/load/armor
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -71,13 +71,13 @@ function phi.modifyinv:setup/whole_inventory
         ### Apply the changes to the MinecraftPhi shulker box
         data modify block -30000000 0 1602 Items set from storage item-multi-part-lib:global temp.container
 
-        function phi.modifyinv:apply/armor
+        function item-multi-part-lib:phi.modifyinv/apply/armor
 
         data remove storage item-multi-part-lib:global temp
 
 
         ##  Load the data of the offhand section
-    function phi.modifyinv:load/offhand
+    function item-multi-part-lib:phi.modifyinv/load/offhand
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -93,7 +93,7 @@ function phi.modifyinv:setup/whole_inventory
         ### Apply the changes to the MinecraftPhi shulker box
         data modify block -30000000 0 1602 Items set from storage item-multi-part-lib:global temp.container
 
-        function phi.modifyinv:apply/offhand
+        function item-multi-part-lib:phi.modifyinv/apply/offhand
 
         data remove storage item-multi-part-lib:global temp
 

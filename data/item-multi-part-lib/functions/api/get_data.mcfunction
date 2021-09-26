@@ -6,12 +6,12 @@
 
 
 #   Fetch the player's inventory data
-function phi.modifyinv:setup/whole_inventory
+function item-multi-part-lib:phi.modifyinv/setup/whole_inventory
 
 
 #   Get the multi-part item from the player's inventory
     ##  Load the data of the hotbar section
-    function phi.modifyinv:load/hotbar
+    function item-multi-part-lib:phi.modifyinv/load/hotbar
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -23,7 +23,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
     ##  Load the data of the inventory section
-    function phi.modifyinv:load/inventory
+    function item-multi-part-lib:phi.modifyinv/load/inventory
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -35,7 +35,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
     ##  Load the data of the armor section
-    function phi.modifyinv:load/armor
+    function item-multi-part-lib:phi.modifyinv/load/armor
 
 
         ### Get the data of the MinecraftPhi shulker box
@@ -47,7 +47,7 @@ function phi.modifyinv:setup/whole_inventory
 
 
     ##  Load the data of the offhand section
-    function phi.modifyinv:load/offhand
+    function item-multi-part-lib:phi.modifyinv/load/offhand
 
 
         ### Get the data of the MinecraftPhi shulker box
