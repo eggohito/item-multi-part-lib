@@ -17,7 +17,7 @@
                 },
                 {
                     "type": "origins:nbt",
-                    "nbt": "{multi-part-lib: {part_count: 4}}",
+                    "nbt": "{item-multi-part-lib: {part_count: 4}}",
                     "inverted": true
                 }
             ]
@@ -28,7 +28,7 @@
         },
         "on_item_action": {
             "type": "origins:modify",
-            "modifier": "multi-part-lib:add_part"
+            "modifier": "item-multi-part-lib:add_part"
         },
         "entity_action": {
             "type": "origins:execute_command",
@@ -52,7 +52,7 @@
                 },
                 {
                     "type": "origins:nbt",
-                    "nbt": "{multi-part-lib: {part_count: 4}}",
+                    "nbt": "{item-multi-part-lib: {part_count: 4}}",
                     "inverted": true
                 }
             ]
@@ -63,7 +63,7 @@
         },
         "on_item_action": {
             "type": "origins:modify",
-            "modifier": "multi-part-lib:add_part"
+            "modifier": "item-multi-part-lib:add_part"
         },
         "entity_action": {
             "type": "origins:execute_command",

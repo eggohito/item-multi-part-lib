@@ -8,14 +8,14 @@
 
 
 #   Get the multi-part item stack
-function multi-part-lib:api/get_data
+function item-multi-part-lib:api/get_data
 
 
 #   Make changes to the item stack
-data modify storage multi-part-lib:io input.tag.multi-part-lib.parts append value {id: "minecraft:emerald", Count: 1b}
+data modify storage item-multi-part-lib:io input.tag.item-multi-part-lib.parts append value {id: "minecraft:emerald", Count: 1b}
 
-data modify storage multi-part-lib:io input.tag.display.Lore append value '{"text": " * Emerald", "color": "green", "italic": false}'
+data modify storage item-multi-part-lib:io input.tag.display.Lore append value '{"text": " * Emerald", "color": "green", "italic": false}'
 
 
 #   Apply the changes to the amulet item
-function multi-part-lib:api/set_data
+function item-multi-part-lib:api/set_data
