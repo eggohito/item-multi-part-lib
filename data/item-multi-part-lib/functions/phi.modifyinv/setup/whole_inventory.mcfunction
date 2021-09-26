@@ -9,5 +9,7 @@ data modify storage phi.modifyinv:temp offhand set value []
 # Copy whole inventory data:
 data modify storage phi.modifyinv:temp whole_inventory set from entity @s Inventory
 
+execute if score #apiGetFunc i-m-p-l.main matches 1 run data modify storage phi.modifyinv:temp whole_inventory set from storage item-multi-part-lib:io input
+
 # Sort the slots into sections:
 function item-multi-part-lib:phi.modifyinv/setup/internal/whole_inventory/sort_slots
