@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 7,
-        "description": "An example datapack that uses the multi-part-lib library"
+        "description": "An example datapack that uses the item-multi-part-lib library"
     }
 }
