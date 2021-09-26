@@ -21,6 +21,10 @@
                 {
                     "function": "minecraft:set_nbt",
                     "tag": "{origins-amulet: 1b}"
+                },
+                {
+                    "function": "minecraft:set_count",
+                    "count": 64
                 }
             ]
         },
