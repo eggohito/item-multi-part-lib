@@ -6,15 +6,15 @@
 
 
 #   Prepend a translated string to the multi-part item only if the `root.msg.prepend` NBT path in the `item-multi-part-lib:global` storage exists
-execute store result score #part_count m-p-l.main if data storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.item-multi-part-lib.parts[]
+execute store result score #part_count i-m-p-l.main if data storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.item-multi-part-lib.parts[]
 
-execute if data storage item-multi-part-lib:global root.msg.prepend unless score #part_count m-p-l.main matches 2.. run data modify block -30000000 0 1603 Text1 set value '{"storage": "item-multi-part-lib:global", "nbt": "root.msg.prepend", "interpret": true}'
+execute if data storage item-multi-part-lib:global root.msg.prepend unless score #part_count i-m-p-l.main matches 2.. run data modify block -30000000 0 1603 Text1 set value '{"storage": "item-multi-part-lib:global", "nbt": "root.msg.prepend", "interpret": true}'
 
-execute if data storage item-multi-part-lib:global root.msg.prepend unless score #part_count m-p-l.main matches 2.. run data modify storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.display.Lore prepend from block -30000000 0 1603 Text1
+execute if data storage item-multi-part-lib:global root.msg.prepend unless score #part_count i-m-p-l.main matches 2.. run data modify storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.display.Lore prepend from block -30000000 0 1603 Text1
 
 
 #   Count how many strings are inside the `parts` NBT array of the amulet
-execute store result storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.item-multi-part-lib.part_count int 1 run scoreboard players get #part_count m-p-l.main
+execute store result storage item-multi-part-lib:global temp.container[{tag: {item-multi-part-lib: {add_part: {new: 1b}}}}].tag.item-multi-part-lib.part_count int 1 run scoreboard players get #part_count i-m-p-l.main
 
 
 #   Remove the `add_part` NBT compound of the amulet
