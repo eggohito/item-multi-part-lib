@@ -1,4 +1,4 @@
-# Multi-part Library
+# Item Multi-part Library
 This datapack uses two of the [MinecraftPhi](https://github.com/MinecraftPhi/MinecraftPhi-modules) modules (mostly `phi.modifyinv` and `phi.core`) in order to modify player inventories indirectly.
 <br>
 
@@ -42,53 +42,9 @@ Afterwards, you can run any item action types in its `using_item_action` item ac
 
 Finally, you would run an "add part" function with the `origins:execute_command` entity action type in its `entity_action` entity action object that would modify the "base" item to have the "part" item data declared from the function to the "base" item.
 
-<ol>
-<details>
-<summary>
-Here's a full example that would only add a "part" to the "base" item if the "base" item doesn't have more than 2 parts, and it has the <code>example_tag: 1b</code> NBT
-</summary>
+[Here's a full example that would only add a "part" to the "base" item if the "base" item doesn't have more than 4 parts, and it has the `origins-amulet: 1b` NBT](https://github.com/eggohito/item-multi-part-lib/blob/1.17.x/example/data/origins-amulet/powers/parts_on_amulet.json)
 
-```json
-{
-    "type": "origins:item_on_item",
-    "using_item_condition": {
-        "type": "origins:ingredient",
-        "ingredient": {
-            "item": "minecraft:diamond"
-        }
-    },
-    "on_item_condition": {
-        "type": "origins:and",
-        "conditions": [
-            {
-                "type": "origins:nbt",
-                "nbt": "{example_tag: 1b}"
-            },
-            {
-                "type": "origins:nbt",
-                "nbt": "{item-multi-part-lib: {part_count: 2}}",
-                "inverted": true
-            }
-        ]
-    },
-    "using_item_action": {
-        "type": "origins:consume",
-        "amount": 1
-    },
-    "on_item_action": {
-        "type": "origins:modify",
-        "modifier": "item-multi-part-lib:add_part"
-    },
-    "entity_action": {
-        "type": "origins:execute_command",
-        "command": "function example:add_part/diamond"
-    }
-}
-```
-
-</details>
-</ol>
-
+<br>
 </details>
 
 <details>
@@ -97,33 +53,10 @@ Create an "add part" function for adding "part" or arbitrary data to the "base" 
 </summary>
 <br>
 
-In the function, you would need to append any data type to the `input.tag.item-multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `item-multi-part-lib.part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
+In the function, you would need to append any data type to the `input[{tag: {item-multi-part-lib: {add_part: {new: 1b, id: "<id>"}}}}].tag.item-multi-part-lib.parts` NBT array (but you can only have single data type in the array), doing so would increase the "base" item's `item-multi-part-lib.part_count` NBT, which can then be used to check how many parts are there in the "base" item. 
 
 After putting in your "part" data and/or arbitrary data in the `input` NBT path of the `item-multi-part-lib:io` storage, you can call the `item-multi-part-lib:api/set_data` function to apply the changes made to the "base" item.
 
-<ol>
-<details>
-<summary>
-Here's an example function that would append an NBT compound in the <code>input.tag.item-multi-part-lib.parts</code> NBT path containing the generic data of the "part" item
-</summary>
-
-```mcfunction
-#> example:add_part/diamond
-# (data/example/functions/add_part/diamond.mcfunction)
-
-#   Get the multi-part item stack
-function item-multi-part-lib:api/get_data
-
-
-#   Make changes to the multi-part item stack
-data modify storage item-multi-part-lib:io input.tag.item-multi-part-lib.parts append value {id: "minecraft:diamond", Count: 1b}
-
-
-#   Apply the changes to the multi-part item stack
-function item-multi-part-lib:api/set_data
-```
-
-</details>
-</ol>
+[Here's an example function that would append an NBT compound in the `[{tag: {item-multi-part-lib: {add_part: {new: 1b, id: "diamond"}}}}].tag.item-multi-part-lib.parts` NBT path containing the generic data of the "part" item](https://github.com/eggohito/item-multi-part-lib/blob/1.17.x/example/data/origins-amulet/functions/add_part/diamond.mcfunction)
 
 </details>
