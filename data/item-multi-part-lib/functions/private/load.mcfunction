@@ -28,6 +28,14 @@ forceload remove -30000000 1600
 
 forceload add -30000000 1600
 
+
+scoreboard objectives add phiglobal dummy
+
+scoreboard objectives add phiconst dummy
+
+scoreboard objectives add phitemp dummy
+
+
 execute unless block -30000000 0 1602 minecraft:yellow_shulker_box run setblock -30000000 0 1602 minecraft:yellow_shulker_box
 
 execute unless block -30000000 0 1603 minecraft:oak_wall_sign run setblock -30000000 0 1603 minecraft:oak_wall_sign[facing = south]
