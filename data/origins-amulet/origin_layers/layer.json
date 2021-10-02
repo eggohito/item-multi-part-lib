@@ -1,7 +1,7 @@
 {
     "order": 100,
     "origins": [
-        "origins-amulet:allow"
+        "origins-amulet:mpl"
     ],
     "auto_choose": true,
     "hidden": true
