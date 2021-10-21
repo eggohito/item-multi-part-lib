@@ -20,7 +20,7 @@
                 },
                 {
                     "function": "minecraft:set_nbt",
-                    "tag": "{origins-amulet: 1b}"
+                    "tag": "{origins-amulet: {complete: 0b}}"
                 },
                 {
                     "function": "minecraft:set_count",

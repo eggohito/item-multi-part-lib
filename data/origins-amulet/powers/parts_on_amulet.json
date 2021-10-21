@@ -9,18 +9,8 @@
             }
         },
         "on_item_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{origins-amulet: 1b}"
-                },
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{item-multi-part-lib: {part_count: 4}}",
-                    "inverted": true
-                }
-            ]
+            "type": "origins:nbt",
+            "nbt": "{origins-amulet: {complete: 0b}}"
         },
         "using_item_action": {
             "type": "origins:consume",
@@ -44,18 +34,8 @@
             }
         },
         "on_item_condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{origins-amulet: 1b}"
-                },
-                {
-                    "type": "origins:nbt",
-                    "nbt": "{item-multi-part-lib: {part_count: 4}}",
-                    "inverted": true
-                }
-            ]
+            "type": "origins:nbt",
+            "nbt": "{origins-amulet: {complete: 0b}}"
         },
         "using_item_action": {
             "type": "origins:consume",

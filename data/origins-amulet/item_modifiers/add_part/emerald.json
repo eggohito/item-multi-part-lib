@@ -1,4 +1,4 @@
 {
     "function": "minecraft:set_nbt",
-    "tag": "{item-multi-part-lib: {add_part: {new: 1b, id: 'origins-amulet:emerald_part'}}}"
+    "tag": "{multipart-item: {add_part: 1b}, origins-amulet: {part_id: 'emerald'}}"
 }
