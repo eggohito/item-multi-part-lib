@@ -1,9 +1,0 @@
-function item-multi-part-lib:phi.modifyinv/setup/whole_inventory
-function item-multi-part-lib:phi.modifyinv/load/hotbar
-function item-multi-part-lib:phi.modifyinv/drop/hotbar
-function item-multi-part-lib:phi.modifyinv/load/inventory
-function item-multi-part-lib:phi.modifyinv/drop/inventory
-function item-multi-part-lib:phi.modifyinv/load/armor
-function item-multi-part-lib:phi.modifyinv/drop/armor
-function item-multi-part-lib:phi.modifyinv/load/offhand
-function item-multi-part-lib:phi.modifyinv/drop/offhand

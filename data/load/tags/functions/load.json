@@ -1,5 +1,5 @@
 {
     "values": [
-        "item-multi-part-lib:private/load"
+        "multipart-item:private/load"
     ]
 }

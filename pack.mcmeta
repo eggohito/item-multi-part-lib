@@ -5,6 +5,6 @@
         "authors": [
             "eggohito"
         ],
-        "description": "A datapack library that can add/remove \"part\" or arbitrary data from a \"base\" item stack"
+        "description": "A datapack library that can add \"parts\" onto a certain item."
     }
 }

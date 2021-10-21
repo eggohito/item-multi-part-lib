@@ -1,0 +1,8 @@
+{
+    "values": [
+        "multipart-item:impl/set_data/sections/armor",
+        "multipart-item:impl/set_data/sections/hotbar",
+        "multipart-item:impl/set_data/sections/inventory",
+        "multipart-item:impl/set_data/sections/offhand"
+    ]
+}
