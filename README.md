@@ -1,3 +1,6 @@
+> # :warning: This library has been superseded by [ioi-pi](https://github.com/eggohito/ioi-pi) :warning:
+<br>
+
 # Multipart Item
 This datapack uses two [MinecraftPhi](https://github.com/MinecraftPhi/MinecraftPhi-modules) modules (mostly `phi.modifyinv` and `phi.core`) in order to modify player inventories indirectly.
 <br>
